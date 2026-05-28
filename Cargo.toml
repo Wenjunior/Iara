@@ -1,0 +1,14 @@
+[package]
+name = "iara"
+version = "0.0.1"
+edition = "2024"
+
+[dependencies]
+rustyline = "18.0.0"
+clap = { version = "4.6.1", features = ["derive"] }
+
+[profile.release]
+lto = true
+strip = true
+opt-level = 3
+codegen-units = 1
